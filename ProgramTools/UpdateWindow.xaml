@@ -1,0 +1,35 @@
+﻿<Window
+	x:Class="ProgramTools.UpdateWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:ProgramTools"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:viewModel="clr-namespace:ProgramTools.ViewModel"
+	Title="{DynamicResource UpdatesWindowTitle}"
+	Width="700"
+	Height="450"
+	d:DataContext="{d:DesignInstance IsDesignTimeCreatable=False,
+	                                 Type=viewModel:UpdateWindowViewModel}"
+	ResizeMode="NoResize"
+	mc:Ignorable="d">
+	<Grid>
+		<DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Apps}">
+			<DataGrid.Columns>
+				<DataGridTextColumn Binding="{Binding Name, Mode=OneWay}" Header="{DynamicResource UpdatesWindowNameColumn}" />
+				<DataGridTextColumn Binding="{Binding LatestVersion, Mode=OneWay}" Header="{DynamicResource UpdatesWindowLatestColumn}" />
+				<DataGridTemplateColumn Header="{DynamicResource UpdatesWindowLinkColumn}">
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<TextBlock>
+								<Hyperlink NavigateUri="{Binding UpdateUrl}" RequestNavigate="Hyperlink_RequestNavigate">
+									Update
+								</Hyperlink>
+							</TextBlock>
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+				</DataGridTemplateColumn>
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
+</Window>

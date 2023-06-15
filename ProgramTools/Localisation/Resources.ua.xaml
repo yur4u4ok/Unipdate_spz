@@ -1,0 +1,28 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<!--#region Navigation-->
+	<sys:String x:Key="NavHelpButton">Головна сторінка</sys:String>
+    <sys:String x:Key="NavUninstallButton">Видалення/Оновлення</sys:String>
+    <sys:String x:Key="NavLanguageButton">Мова: УКР</sys:String>
+	<!--#endregion-->
+	<!--#region Update-->
+	<sys:String x:Key="UpdatesWindowTitle">Доступні оновлення</sys:String>
+	<sys:String x:Key="UpdatesWindowNameColumn">Назва</sys:String>
+	<sys:String x:Key="UpdatesWindowLatestColumn">Остання версія</sys:String>
+	<sys:String x:Key="UpdatesWindowLinkColumn">Посилання</sys:String>
+	<!--#endregion-->
+	<!--#region Uninstall-->
+	<sys:String x:Key="UninstallSearchButton">Пошук</sys:String>
+	<sys:String x:Key="UninstallCheckButton">Перевірити оновлення</sys:String>
+	<sys:String x:Key="UninstallUninstallButton">Видалити обране</sys:String>
+	<sys:String x:Key="UninstallNameColumn">Назва</sys:String>
+	<sys:String x:Key="UninstallInstalledDateColumn">Дата встановлення</sys:String>
+	<sys:String x:Key="UninstallVersionColumn">Версія</sys:String>
+	<!--#endregion-->
+	<sys:String x:Key="ApplicationTitle">Unipdate</sys:String>
+    <sys:String x:Key="HelpWelcomeText" xml:space="preserve">"Юніпдейт" - ефективне і надійне рішення для видалення та оновлення програм на вашому комп'ютері. &#10;&#10;"Видалення/Оновлення" - усі програми, які можна видалити. "Перевірити оновлення" - показує всі доступні програми, які потрібно оновити.&#10;"Зміна мови" - дозволяє змінити мову. &#10;&#10;Контактна інформація: &#10;Email - ostap.yurchuk.ki.2020@lpnu.ua&#10;Telegram - yur4u4ok</sys:String>
+    
+
+</ResourceDictionary>
